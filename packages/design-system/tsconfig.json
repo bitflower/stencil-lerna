@@ -14,5 +14,6 @@
     "jsxFactory": "h"
   },
   "include": ["src", "types/jsx.d.ts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "src/**/*.spec.ts*", "src/**/*.e2e.ts*"],
+  "references": [{ "path": "../pkg1" }]
 }

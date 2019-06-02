@@ -7,7 +7,7 @@ import { MatchResults } from '@stencil/router';
   shadow: true
 })
 export class AppProfile {
-  @Prop() match: MatchResults;
+  @Prop() match: MatchResults = null;
 
   normalize(name: string): string {
     if (name) {
@@ -21,8 +21,8 @@ export class AppProfile {
       return (
         <div class="app-profile">
           <p>
-            Hello! My name is {this.normalize(this.match.params.name)}. My name was passed in
-            through a route param!
+            Hello! My name is {this.normalize(this.match.params.name)}. My name
+            was passed in through a route param!
           </p>
         </div>
       );

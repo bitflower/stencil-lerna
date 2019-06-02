@@ -20,6 +20,9 @@
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
+  "dependencies": {
+    "@ryancavanaugh/pkg1": "^3.0.2"
+  },
   "devDependencies": {
     "@stencil/core": "^1.0.0"
   },
