@@ -14,5 +14,6 @@
     "jsxFactory": "h"
   },
   "include": ["src"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  "references": [{ "path": "../design-system" }]
 }
