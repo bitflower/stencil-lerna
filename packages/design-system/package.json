@@ -1,5 +1,5 @@
 {
-  "name": "design-system",
+  "name": "@bitflower/design-system",
   "version": "0.0.1",
   "description": "Stencil Component Starter",
   "main": "dist/index.js",
