@@ -12,7 +12,7 @@ This is a "bare minimum" repo that shows one way to configure TypeScript Project
 > tsc -b packages
 ```
 
-Note that you'll need a 3.0 version of `tsc` (currently available at `npm install -g typescript@next`).
+Note that you'll need at least 3.0 version of `tsc`.
 
 ### General Structure
 
