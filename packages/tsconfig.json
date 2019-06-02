@@ -4,6 +4,7 @@
     { "path": "pkg1" },
     { "path": "pkg2" },
     { "path": "pkg3" },
-    { "path": "design-system" }
+    { "path": "design-system" },
+    { "path": "app" }
   ]
 }
