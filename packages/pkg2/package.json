@@ -15,6 +15,6 @@
     "@ryancavanaugh/pkg1": "^3.0.2"
   },
   "devDependencies": {
-    "typescript": "^3.0.0-dev.20180626"
+    "typescript": "^3.4.5"
   }
 }
