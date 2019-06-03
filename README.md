@@ -21,6 +21,8 @@ or
 
 Note that you'll need at least 3.0 version of `tsc`.
 
+Also note that I haven't updated this `readme.md` in total to represent the Stencil use case.
+
 ### General Structure
 
 As with a normal lerna repo, there's a `packages` folder. Inside we have three creatively named packages `design-system`, `app` as well as `pkg1`, `pkg2` and `pkg3`.
