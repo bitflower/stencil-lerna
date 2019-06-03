@@ -1,31 +1,46 @@
-# Lerna + Project References
+# Stencil monorepo with Lerna + Typescript Project References
 
-This is a "bare minimum" repo that shows one way to configure TypeScript Project References with lerna. There are a lot of different ways you can set things up and this isn't intended to be authoratitive guidance or exclusionary of other ways that might work better in your project.
+This is a "bare minimum" repo that shows one way to configure several Stencil and other TypeScript projects with lerna. it uses Project References. There are a lot of different ways you can set things up and this isn't intended to be authoratitive guidance or exclusionary of other ways that might work better in your project.
+
+This repo started as a clone of https://github.com/RyanCavanaugh/learn-a.
 
 # Setting up this repo
 
 ```
-> git clone https://github.com/RyanCavanaugh/learn-a.git
-> cd learn-a
+> git clone https://github.com/bitflower/stencil-lerna.git
+> cd stencil-lerna
 > npm install
 > lerna bootstrap
 > tsc -b packages
+> lerna run build
+
+or
+
+> lerna run --scope="app" start --stream
 ```
 
 Note that you'll need at least 3.0 version of `tsc`.
 
 ### General Structure
 
-As with a normal lerna repo, there's a `packages` folder. Inside we have three creatively named packages `pkg1`, `pkg2`, and `pkg3`.
+As with a normal lerna repo, there's a `packages` folder. Inside we have three creatively named packages `design-system`, `app` as well as `pkg1`, `pkg2` and `pkg3`.
 
 ```
 packages/
 | tsconfig.settings.json
 | tsconfig.json
+| app/
+  | tsconfig.json
+  | src/
+  | | (typescript files)
+| design-system/
+  | tsconfig.json
+  | src/
+  | | (typescript files)
 | pkg1/
   | tsconfig.json
   | src/
-  | | (typescript files)        
+  | | (typescript files)
   | lib/
   | | (javascript files)
   | | (.d.ts files)
@@ -49,8 +64,8 @@ Let's review each file in the repo and explain what's going on
 
         // These settings are totally up to you        
         "esModuleInterop": true,
-        "target": "es5",
-        "module": "commonjs",
+        "target": "es2017",
+        "module": "esnext",
         "strict": true
     }
 }
@@ -64,7 +79,9 @@ This file contains the "default" settings that all packages will use for compila
     "references": [
         { "path": "pkg1" },
         { "path": "pkg2" },
-        { "path": "pkg3" }
+        { "path": "pkg3" },
+        { "path": "design-system" },
+        { "path": "app" }
     ]
 }
 ```
@@ -112,7 +129,7 @@ Here are the relevant excerpts from the `package.json`:
     "prepublishOnly": "tsc -b ."
   },
   "devDependencies": {
-    "typescript": "^3.0.0-dev.20180626"
+    "typescript": "^3.4.5"
   }
 }
 ```
