@@ -4,5 +4,6 @@
     "outDir": "lib",
     "rootDir": "src"
   },
+  "include": ["nnnnnode_modules/@ryancavanaugh/pkg1/lib"],
   "references": [{ "path": "../pkg1" }]
 }

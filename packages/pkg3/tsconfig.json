@@ -4,8 +4,6 @@
     "outDir": "lib",
     "rootDir": "src"
   },
-  "references": [
-    { "path": "../pkg1" },
-    { "path": "../pkg2" }
-  ]
+  "include": ["node_modules/@ryancavanaugh/pkg1/lib"],
+  "references": [{ "path": "../pkg1" }, { "path": "../pkg2" }]
 }
