@@ -14,7 +14,7 @@ import {
 export namespace Components {
   interface AppHome {}
   interface AppProfile {
-    'match': MatchResults;
+    'match'?: MatchResults;
   }
   interface AppRoot {}
 }

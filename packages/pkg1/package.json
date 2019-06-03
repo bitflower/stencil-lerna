@@ -2,8 +2,8 @@
   "name": "@ryancavanaugh/pkg1",
   "version": "3.0.2",
   "description": "",
-  "main": "lib/index.js",
-  "typings": "lib/index.d.ts",
+  "module": "lib/index.js",
+  "types": "lib/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "tsc -b ."
