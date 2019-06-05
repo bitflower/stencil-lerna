@@ -16,7 +16,11 @@ This repo started as a clone of https://github.com/RyanCavanaugh/learn-a.
 
 or
 
-> lerna run --scope="app" start --stream
+> lerna run --scope="app" start --stream 
+
+or short cut 
+
+> npm run dev
 ```
 
 Note that you'll need at least 3.0 version of `tsc`.
