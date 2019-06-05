@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "dev": "lerna run --scope='app' start --stream"
+  },
   "devDependencies": {
     "lerna": "^3.13.4",
     "typescript": "^3.4.5"
