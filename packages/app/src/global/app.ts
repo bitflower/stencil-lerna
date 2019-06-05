@@ -1,1 +1,2 @@
-import '@bitflower/design-system';
+// import '@bitflower/design-system';
+import '../../../design-system/dist/esm/index.mjs';
