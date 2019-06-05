@@ -5,8 +5,9 @@
   "module": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "build": "tsc -b .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "prepublishOnly": "tsc -b ."
+    "prepublishOnly": "npm run build"
   },
   "keywords": [],
   "author": "",
