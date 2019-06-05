@@ -1,7 +1,10 @@
 import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
 
-import * as p1 from '@ryancavanaugh/pkg1';
+// import { fn } from '@ryancavanaugh/pkg1';
+import p1 from '@ryancavanaugh/pkg1';
+// import { fn4 } from '@ryancavanaugh/pkg2';
+// import * as p2 from '@ryancavanaugh/pkg2';
 
 @Component({
   tag: 'my-component',
@@ -29,9 +32,13 @@ export class MyComponent {
   }
 
   render() {
+    console.log('BLUB', p1);
+
     return (
       <div>
-        Hello! I'm {this.getText()} {p1.fn()}
+        Hello! I'm {this.getText()}
+        {p1.fn()}
+        {/* {fn4()} */}
       </div>
     );
   }

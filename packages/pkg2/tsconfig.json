@@ -1,6 +1,9 @@
 {
   "extends": "../tsconfig.settings.json",
   "compilerOptions": {
+    "module": "commonjs",
+    "target": "es5",
+    "moduleResolution": "node",
     "outDir": "lib",
     "rootDir": "src"
   },

@@ -2,8 +2,11 @@
   "name": "@ryancavanaugh/pkg1",
   "version": "3.0.2",
   "description": "",
-  "module": "lib/index.js",
+  "main": "lib/index.js",
   "types": "lib/index.d.ts",
+  "files": [
+    "lib"
+  ],
   "scripts": {
     "build": "tsc -b .",
     "test": "echo \"Error: no test specified\" && exit 1",
