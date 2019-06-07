@@ -5,7 +5,7 @@ import { format } from '../../utils/utils';
 import * as p1 from '@ryancavanaugh/pkg1';
 // import p1 from '@ryancavanaugh/pkg1';
 // import { fn4 } from '@ryancavanaugh/pkg2';
-// import * as p2 from '@ryancavanaugh/pkg2';
+import * as p2 from '@ryancavanaugh/pkg2';
 
 @Component({
   tag: 'my-component',
@@ -39,7 +39,7 @@ export class MyComponent {
       <div>
         <p>Hello! I'm {this.getText()}</p>
         <p>{p1.fn()}</p>
-        {/* {fn4()} */}
+        <p>{p2.connectServer()}</p>
       </div>
     );
   }

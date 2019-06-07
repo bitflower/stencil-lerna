@@ -14,6 +14,8 @@ export interface CoConnectServerOptions {
 export const connectServer: Function = (
   options?: CoConnectServerOptions
 ): void => {
+  console.log('Connecting to Feathers server');
+
   // Create Feathers app
   feathersClient = feathers();
 

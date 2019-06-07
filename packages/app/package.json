@@ -10,9 +10,12 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@stencil/core": "^1.0.0",
-    "@stencil/router": "one",
-    "@bitflower/design-system": "0.0.1"
+    "@bitflower/design-system": "0.0.1",
+    "@stencil/core": "^1.0.1",
+    "@stencil/router": "one"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "rollup-plugin-node-builtins": "^2.1.2"
+  }
 }

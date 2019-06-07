@@ -21,10 +21,13 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "@ryancavanaugh/pkg1": "^3.0.2"
+    "@ryancavanaugh/pkg1": "^3.0.2",
+    "@ryancavanaugh/pkg2": "^3.0.2"
   },
   "devDependencies": {
-    "@stencil/core": "^1.0.0"
+    "@stencil/core": "^1.0.1",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-polyfills": "^0.1.2"
   },
   "license": "MIT"
 }

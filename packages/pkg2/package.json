@@ -16,9 +16,11 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@feathersjs/feathers": "^3.3.1",
     "@ryancavanaugh/pkg1": "^3.0.2"
   },
   "devDependencies": {
+    "@types/feathersjs__feathers": "^3.1.5",
     "typescript": "3.4.5"
   }
 }

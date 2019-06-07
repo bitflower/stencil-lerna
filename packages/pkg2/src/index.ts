@@ -4,4 +4,4 @@ export function fn4(): string {
   return p1.fn();
 }
 
-// export * from './feathers';
+export * from './feathers';
