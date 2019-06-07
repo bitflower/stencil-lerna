@@ -33,3 +33,7 @@ export const connectServer: Function = (
   //       })
   //     );
 };
+
+export const saySomething: () => string = () => {
+  return 'Hello from PKG2!';
+};
