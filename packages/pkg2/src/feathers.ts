@@ -1,6 +1,8 @@
-// Feathers client
 import auth from '@feathersjs/authentication-client';
 import feathers, { Application } from '@feathersjs/feathers';
+
+import { getLogger } from './utils/logger';
+const d: any = getLogger('lerna-stencil:feathers.ts');
 
 // import setupSocket from './socket-io';
 
@@ -15,6 +17,7 @@ export const connectServer: Function = (
   options?: CoConnectServerOptions
 ): void => {
   console.log('Connecting to Feathers server');
+  d('Connecting to Feathers server');
 
   // Create Feathers app
   feathersClient = feathers();
