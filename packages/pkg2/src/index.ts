@@ -5,3 +5,4 @@ export function fn(): string {
 }
 
 export * from './feathers';
+export * from './utils';
