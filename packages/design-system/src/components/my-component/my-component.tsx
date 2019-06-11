@@ -1,4 +1,4 @@
-import { Component, Prop, h } from '@stencil/core';
+import { Component, Prop, h, Method } from '@stencil/core';
 import { format } from '../../utils/utils';
 
 import * as p1 from '@ryancavanaugh/pkg1';
@@ -24,6 +24,11 @@ export class MyComponent {
    * The last name
    */
   @Prop() last: string = '';
+
+  @Method()
+  public async callMe(smth: string): Promise<void> {
+    console.log(smth);
+  }
 
   private getText(): string {
     return format(this.first, this.middle, this.last);

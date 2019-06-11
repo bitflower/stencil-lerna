@@ -1,6 +1,7 @@
-import { Component, h } from '@stencil/core';
-
+import { Component, Element, h } from '@stencil/core';
 import * as p2 from '@ryancavanaugh/pkg2';
+
+const d = p2.getLogger('app-root.tsx');
 
 @Component({
   tag: 'app-root',
@@ -8,6 +9,21 @@ import * as p2 from '@ryancavanaugh/pkg2';
   shadow: true
 })
 export class AppRoot {
+  @Element()
+  private $elm: HTMLAppRootElement;
+
+  public async componentDidLoad(): Promise<void> {
+    d('componentDidLoad');
+    // const myComp: null | HTMLMyComponentElement[] = this.$elm.querySelectorAll(
+    const myComp: null | HTMLMyComponentElement = this.$elm.shadowRoot
+      ? this.$elm.shadowRoot.querySelector('my-component')
+      : null;
+    d('myComp', myComp);
+    if (myComp) {
+      await myComp.callMe('Yo');
+    }
+  }
+
   render() {
     return (
       <div>

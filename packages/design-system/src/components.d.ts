@@ -10,6 +10,7 @@ import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 export namespace Components {
   interface MyComponent {
+    'callMe': (smth: string) => Promise<void>;
     /**
     * The first name
     */
