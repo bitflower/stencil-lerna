@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "dev": "lerna run --scope='app' start --stream"
+    "dev": "lerna run --scope='app' start --stream",
+    "server": "lerna run start-ts --stream"
   },
   "devDependencies": {
     "lerna": "^3.13.4",
