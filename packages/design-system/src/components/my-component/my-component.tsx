@@ -1,10 +1,7 @@
 import { Component, Prop, h } from '@stencil/core';
 import { format } from '../../utils/utils';
 
-// import { fn } from '@ryancavanaugh/pkg1';
 import * as p1 from '@ryancavanaugh/pkg1';
-// import p1 from '@ryancavanaugh/pkg1';
-// import { fn4 } from '@ryancavanaugh/pkg2';
 import * as p2 from '@ryancavanaugh/pkg2';
 
 @Component({
