@@ -12,10 +12,13 @@ import {
 
 export namespace Components {
   interface AppHome {}
+  interface AppMethodTest {}
   interface AppProfile {
     'match'?: MatchResults;
   }
-  interface AppRoot {}
+  interface AppRoot {
+    'callMe': () => Promise<void>;
+  }
 }
 
 declare global {
@@ -25,6 +28,12 @@ declare global {
   var HTMLAppHomeElement: {
     prototype: HTMLAppHomeElement;
     new (): HTMLAppHomeElement;
+  };
+
+  interface HTMLAppMethodTestElement extends Components.AppMethodTest, HTMLStencilElement {}
+  var HTMLAppMethodTestElement: {
+    prototype: HTMLAppMethodTestElement;
+    new (): HTMLAppMethodTestElement;
   };
 
   interface HTMLAppProfileElement extends Components.AppProfile, HTMLStencilElement {}
@@ -40,6 +49,7 @@ declare global {
   };
   interface HTMLElementTagNameMap {
     'app-home': HTMLAppHomeElement;
+    'app-method-test': HTMLAppMethodTestElement;
     'app-profile': HTMLAppProfileElement;
     'app-root': HTMLAppRootElement;
   }
@@ -47,6 +57,7 @@ declare global {
 
 declare namespace LocalJSX {
   interface AppHome extends JSXBase.HTMLAttributes<HTMLAppHomeElement> {}
+  interface AppMethodTest extends JSXBase.HTMLAttributes<HTMLAppMethodTestElement> {}
   interface AppProfile extends JSXBase.HTMLAttributes<HTMLAppProfileElement> {
     'match'?: MatchResults;
   }
@@ -54,6 +65,7 @@ declare namespace LocalJSX {
 
   interface IntrinsicElements {
     'app-home': AppHome;
+    'app-method-test': AppMethodTest;
     'app-profile': AppProfile;
     'app-root': AppRoot;
   }
