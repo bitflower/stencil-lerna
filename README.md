@@ -1,33 +1,4 @@
-# @stencil/core@1.9.0-12 $hostElement$ bug
-
-This repo re-produces 2 bugs.
-
-ONE:
-
-```console
-index-7d8f9f58.js:2562 TypeError: Cannot read property '$hostElement$' of undefined
-    at setValue (index-7d8f9f58.js:1696)
-    at MyComponent.set [as first] (index-7d8f9f58.js:1774)
-    at new MyComponent (my-component.entry.js:15)
-    at initializeComponent (index-7d8f9f58.js:1872)
-```
-
-![](https://github.com/bitflower/stencil-lerna/raw/stencil-next/Bildschirmfoto%202020-01-16%20um%2014.59.54.png)
-
-TWO:
-
-```
-index-7d8f9f58.js:2562 TypeError: Cannot read property 'render' of undefined
-    at callRender (index-7d8f9f58.js:1212)
-    at updateComponent (index-7d8f9f58.js:1147)
-    at Array.update (index-7d8f9f58.js:1095)
-    at consumeTimeout (index-7d8f9f58.js:2621)
-    at flush (index-7d8f9f58.js:2644)
-```
-
-> Please ignore the WebSocket error in the console. They are not relevant.
-
-## Stencil monorepo with Lerna + Typescript Project References
+# Stencil monorepo with Lerna + Typescript Project References
 
 This is a "bare minimum" repo that shows one way to configure several Stencil and other TypeScript projects with lerna. it uses Project References. There are a lot of different ways you can set things up and this isn't intended to be authoratitive guidance or exclusionary of other ways that might work better in your project.
 
