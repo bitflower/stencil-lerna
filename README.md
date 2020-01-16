@@ -1,6 +1,8 @@
 # @stencil/core@1.9.0-12 $hostElement$ bug
 
-This repo re-produces the bug
+This repo re-produces 2 bugs.
+
+ONE:
 
 ```console
 index-7d8f9f58.js:2562 TypeError: Cannot read property '$hostElement$' of undefined
@@ -11,6 +13,19 @@ index-7d8f9f58.js:2562 TypeError: Cannot read property '$hostElement$' of undefi
 ```
 
 ![](https://github.com/bitflower/stencil-lerna/raw/stencil-next/Bildschirmfoto%202020-01-16%20um%2014.59.54.png)
+
+TWO:
+
+```
+index-7d8f9f58.js:2562 TypeError: Cannot read property 'render' of undefined
+    at callRender (index-7d8f9f58.js:1212)
+    at updateComponent (index-7d8f9f58.js:1147)
+    at Array.update (index-7d8f9f58.js:1095)
+    at consumeTimeout (index-7d8f9f58.js:2621)
+    at flush (index-7d8f9f58.js:2644)
+```
+
+> Please ignore the WebSocket error in the console. They are not relevant.
 
 ## Stencil monorepo with Lerna + Typescript Project References
 
