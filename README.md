@@ -11,19 +11,8 @@ This repo started as a clone of https://github.com/RyanCavanaugh/learn-a.
 > cd stencil-lerna
 > npm install
 > lerna bootstrap
-> tsc -b packages
-> lerna run build
-
-or
-
-> lerna run --scope="app" start --stream 
-
-or short cut 
-
-> npm run dev
+> npm run build
 ```
-
-Note that you'll need at least 3.0 version of `tsc`.
 
 Also note that I haven't updated this `readme.md` in total to represent the Stencil use case.
 
@@ -59,6 +48,7 @@ packages/
 Let's review each file in the repo and explain what's going on
 
 #### `tsconfig.settings.json`
+
 ```js
 {
     "compilerOptions": {
@@ -68,7 +58,7 @@ Let's review each file in the repo and explain what's going on
         "declarationMap": true,
         "sourceMap": true,
 
-        // These settings are totally up to you        
+        // These settings are totally up to you
         "esModuleInterop": true,
         "target": "es2017",
         "module": "esnext",
@@ -76,27 +66,31 @@ Let's review each file in the repo and explain what's going on
     }
 }
 ```
+
 This file contains the "default" settings that all packages will use for compilation. You will definitely want the `composite`, `declaration`, `declarationMap`, and `sourceMap` settings enabled for all projects, so include those in this file. Other settings, like `target` and `strict`, can be specified here if you'd like to enable them by default. You'll also be able to override these settings on a per-package basis if needed.
 
 #### `tsconfig.json`
+
 ```json
 {
-    "files": [],
-    "references": [
-        { "path": "pkg1" },
-        { "path": "pkg2" },
-        { "path": "pkg3" },
-        { "path": "design-system" },
-        { "path": "app" }
-    ]
+  "files": [],
+  "references": [
+    { "path": "pkg1" },
+    { "path": "pkg2" },
+    { "path": "pkg3" },
+    { "path": "design-system" },
+    { "path": "app" }
+  ]
 }
 ```
+
 This file is pretty simple - simply list the packages that need to be built with `tsc` in the `references` array.
 You should also include `"files": []` in this file - this will prevent an incorrect invocation of `tsc` without `-b` from trying to build the entire packages folder source files as one compilation (which will fail, but drop a bunch of .js files in random places as an annoying side effect).
 
 #### `packages/pkg2/tsconfig.json`
 
 We'll just cover one of the `pkg1` / `pkg2` / `pkg3` packages since they're basically identical for the purposes of this demo. Here's `pkg2`'s `tsconfig.json`:
+
 ```json
 {
   "extends": "../tsconfig.settings.json",
@@ -104,11 +98,10 @@ We'll just cover one of the `pkg1` / `pkg2` / `pkg3` packages since they're basi
     "outDir": "lib",
     "rootDir": "src"
   },
-  "references": [
-    { "path": "../pkg1" }
-  ]
+  "references": [{ "path": "../pkg1" }]
 }
 ```
+
 The `extends` property pulls in the settings we wrote in `tsconfig.settings.json`, so we don't have to duplicate any settings described there.
 
 In `compilerOptions`, we've set `outDir` to `lib` and `rootDir` to `src`, then placed all my `.ts` files in `src`. This means `src/index.ts` will build to `lib/index.js` and `lib/index.d.ts`. This is also the place where you could override settings like `strict` or `target` if you needed to change them on a per-project basis.
@@ -116,17 +109,21 @@ In `compilerOptions`, we've set `outDir` to `lib` and `rootDir` to `src`, then p
 In the `references` array, we list the paths to the other projects' `tsconfig.json` files (or containing folders, as shown here). This will both ensure that we locate the `.d.ts` files correctly, and set up a proper build ordering.
 
 #### `packages/pkg2/src/index.ts`
+
 ```ts
-import * as p1 from '@ryancavanaugh/pkg1';
+import * as p1 from "@ryancavanaugh/pkg1";
 
 export function fn4() {
-    p1.fn();
+  p1.fn();
 }
 ```
+
 Nothing unusual going on here. We import and export with the usual syntax. Notably, if you open this repo in an editor, you can still "Go to Definition (F12)" on `p1.fn` here and land in `pkg1/foo.ts` - the original sourcecode - even though "under the covers" it's using the much faster `.d.ts` file for typechecking.
 
 #### `packages/pkg2/package.json`
+
 Here are the relevant excerpts from the `package.json`:
+
 ```json
 {
   "main": "lib/index.js",
@@ -140,18 +137,20 @@ Here are the relevant excerpts from the `package.json`:
 }
 ```
 
-Because we build to `lib`, we need to set `main` to the `.js` file there *and* `typings` to the `.d.ts` file.
+Because we build to `lib`, we need to set `main` to the `.js` file there _and_ `typings` to the `.d.ts` file.
 
-In `scripts`, we use the local copy of `tsc` (listed here as a dev dependency) to run a *build mode* compilation on the project. This will ensure that the `lib` folder is always built before `npm publish`, and blocks any publishes that try to push non-compiling code.
+In `scripts`, we use the local copy of `tsc` (listed here as a dev dependency) to run a _build mode_ compilation on the project. This will ensure that the `lib` folder is always built before `npm publish`, and blocks any publishes that try to push non-compiling code.
 
 #### `packages/pkg2/.npmignore` / `packages/pkg2/.gitignore`
 
-*.gitignore*
+_.gitignore_
+
 ```
 lib/
 ```
 
-*.npmignore*
+_.npmignore_
+
 ```
 # Empty, but needs to exist
 ```
@@ -163,10 +162,13 @@ The `.gitignore` stops us from checking in build outputs, which is generally a g
 All your lerna commands and workflow will work as expected here.
 
 To build the TypeScript projects, you can run individual builds with `tsc -b`:
+
 ```
  > tsc -b packages/pkg3
 ```
+
 Or just build everything:
+
 ```
  > tsc -b packages
 ```
