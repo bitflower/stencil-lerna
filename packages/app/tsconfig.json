@@ -1,19 +1,31 @@
 {
   "extends": "../tsconfig.settings.json",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
-    "allowUnreachableCode": false,
-    "experimentalDecorators": true,
-    "lib": ["dom", "es2015"],
-    "moduleResolution": "node",
-    "module": "esnext",
     "target": "es2017",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "sourceMap": true,
+    "jsx": "react",
+    "jsxFactory": "h",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "noImplicitAny": false,
+    "noImplicitReturns": false,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "jsx": "react",
-    "jsxFactory": "h"
+    "strictNullChecks": false,
+    "lib": ["es6", "es7", "esnext", "dom"]
   },
   "include": ["src"],
-  "exclude": ["node_modules", "src/**/*.spec.ts*", "src/**/*.e2e.ts*"],
+  "exclude": [
+    "docs",
+    "node_modules",
+    "stencil.config.ts",
+    "dist",
+    "www",
+    "src/**/*.spec.ts*",
+    "src/**/*.e2e.ts*"
+  ],
   "references": [{ "path": "../design-system" }, { "path": "../pkg2" }]
 }

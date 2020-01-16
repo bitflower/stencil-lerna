@@ -5,6 +5,7 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
+    "start-ts": "cross-env NODE_ENV= ts-node --files src/",
     "build": "tsc -b .",
     "test": "echo \"Error: no test specified\" && exit 1",
     "prepublishOnly": "npm run build"
@@ -13,10 +14,16 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@feathersjs/feathers": "^3.3.1",
     "@ryancavanaugh/pkg1": "^3.0.2",
-    "@ryancavanaugh/pkg2": "^3.0.2"
+    "@ryancavanaugh/pkg2": "^3.0.2",
+    "cross-env": "^5.2.0"
   },
   "devDependencies": {
-    "typescript": "3.4.5"
+    "@types/feathersjs__feathers": "^3.1.5",
+    "ts-node": "^7.0.1",
+    "tslib": "^1.9.3",
+    "tslint": "^5.16.0",
+    "typescript": "^3.7.4"
   }
 }

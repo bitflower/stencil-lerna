@@ -26,6 +26,6 @@
   "devDependencies": {
     "@types/feathersjs__feathers": "^3.1.5",
     "@types/socket.io-client": "^1.4.32",
-    "typescript": "3.4.5"
+    "typescript": "^3.7.4"
   }
 }

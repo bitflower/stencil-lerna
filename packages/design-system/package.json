@@ -16,7 +16,7 @@
   ],
   "scripts": {
     "build-watch": "stencil build --prod --docs --watch",
-    "build": "stencil build --prod --docs",
+    "build": "stencil build --prod --docs --next",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll"
@@ -26,9 +26,10 @@
     "@ryancavanaugh/pkg2": "^3.0.2"
   },
   "devDependencies": {
-    "@stencil/core": "^1.0.2",
+    "@stencil/core": "^1.9.0-12",
     "rollup-plugin-node-builtins": "^2.1.2",
-    "rollup-plugin-node-polyfills": "^0.1.2"
+    "rollup-plugin-node-polyfills": "^0.1.2",
+    "typescript": "^3.7.4"
   },
   "license": "MIT"
 }

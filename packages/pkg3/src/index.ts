@@ -1,5 +1,24 @@
-import * as p1 from "@ryancavanaugh/pkg1";
-import * as p2 from "@ryancavanaugh/pkg2";
+import { app } from './app';
 
-p1.fn();
-p2.fn4();
+const port = app.get('port');
+const server = (app as any).listen(port);
+// !code: init2 // !end
+
+// process.on('unhandledRejection', (reason, p) => {
+//   // !<DEFAULT> code: unhandled_rejection_log
+//   logger.error('Unhandled Rejection at: Promise ', p, reason);
+//   // !end
+//   // !code: unhandled_rejection // !end
+// });
+
+server.on('listening', async () => {
+  // !code: listening_log
+  //   logger.info(
+  //     'CaseOS application started on http://%s:%d',
+  //     app.get('host'),
+  //     port
+  //   );
+  // !end
+  // !code: listening // !end
+  // !code: listening1 // !end
+});

@@ -2,8 +2,14 @@
   "extends": "../tsconfig.settings.json",
   "compilerOptions": {
     "outDir": "lib",
-    "rootDir": "src"
+    "rootDir": "src",
+    "moduleResolution": "node",
+    "target": "ES2017",
+    "module": "commonjs",
+    "typeRoots": [
+      /* List of folders to include type definitions from. */
+      "node_modules/@types"
+    ]
   },
-  "include": ["node_modules/@ryancavanaugh/pkg1/lib"],
-  "references": [{ "path": "../pkg1" }, { "path": "../pkg2" }]
+  "references": []
 }
