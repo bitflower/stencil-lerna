@@ -4,6 +4,7 @@ import builtins from "rollup-plugin-node-builtins";
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
+  namespace: "stencil-lerna",
   globalStyle: "src/global/app.css",
   globalScript: "src/global/app.ts",
   outputTargets: [
