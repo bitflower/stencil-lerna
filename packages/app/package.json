@@ -8,8 +8,8 @@
   "collection": "dist/collection/collection-manifest.json",
   "types": "dist/types/components.d.ts",
   "scripts": {
-    "build": "stencil build --prod --next",
-    "start": "stencil build --dev --watch --serve --next",
+    "build": "stencil build --prod",
+    "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
