@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/69bc09c2-1df4-4419-aef3-40bb64b4cb8b/deploy-status)](https://app.netlify.com/sites/dreamy-neumann-260153/deploys)
+
 # Stencil monorepo with Lerna + Typescript Project References
 
 This is a "bare minimum" repo that shows one way to configure several Stencil and other TypeScript projects with lerna. it uses Project References. There are a lot of different ways you can set things up and this isn't intended to be authoratitive guidance or exclusionary of other ways that might work better in your project.
