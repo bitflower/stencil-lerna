@@ -42,7 +42,7 @@ export class MyComponent {
         <p>Hello! I'm {this.getText()}</p>
         <p>{p1.fn()}</p>
         <p>{p2.fn()}</p>
-        <p>{p2.connectServer()}</p>
+        {/* <p>{p2.connectServer()}</p> */}
       </div>
     );
   }

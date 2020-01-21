@@ -34,17 +34,17 @@ export class AppRoot {
         <main>
           <stencil-router>
             <stencil-route-switch scrollTopOffset={0}>
-              <stencil-route url="/" component="app-home" exact={true} />
-              <stencil-route url="/profile/:name" component="app-profile" />
+              <stencil-route url='/' component='app-home' exact={true} />
+              <stencil-route url='/profile/:name' component='app-profile' />
             </stencil-route-switch>
           </stencil-router>
 
           <h2>Here's the DESIGN SYSTEM component:</h2>
-          <my-component first="Matthias" last="Max" />
+          <my-component first='Matthias' last='Max' />
 
           <h2>Here's PKG2 consumed directly from "app"</h2>
           <p>{p2.fn()}</p>
-          <p>{p2.connectServer()}</p>
+          {/* <p>{p2.connectServer()}</p> */}
         </main>
       </div>
     );
