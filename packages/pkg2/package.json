@@ -19,11 +19,11 @@
     "@feathersjs/authentication-client": "^1.0.11",
     "@feathersjs/feathers": "^3.3.1",
     "@ryancavanaugh/pkg1": "^3.0.2",
-    "@types/debug": "^4.1.4",
     "debug": "^4.1.1",
     "socket.io-client": "^2.2.0"
   },
   "devDependencies": {
+    "@types/debug": "^4.1.5",
     "@types/feathersjs__feathers": "^3.1.5",
     "@types/socket.io-client": "^1.4.32",
     "typescript": "^3.7.4"
