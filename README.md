@@ -9,6 +9,7 @@ This repo started as a clone of https://github.com/RyanCavanaugh/learn-a.
 ```terminal
 git clone https://github.com/bitflower/stencil-lerna.git
 cd stencil-lerna
+git checkout stencil-next
 npm install
 lerna bootstrap
 npm run build
