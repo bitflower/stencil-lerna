@@ -1,1 +1,1 @@
-import "@bitflower/design-system";
+import 'design-system';
