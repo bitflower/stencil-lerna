@@ -12,6 +12,8 @@ This repo started as a clone of https://github.com/RyanCavanaugh/learn-a.
 > npm install
 > lerna bootstrap
 > npm run build
+> cd packages/app
+> npm start
 ```
 
 Also note that I haven't updated this `readme.md` in total to represent the Stencil use case.
