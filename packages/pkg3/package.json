@@ -25,5 +25,8 @@
     "tslib": "^1.9.3",
     "tslint": "^5.16.0",
     "typescript": "^3.7.4"
+  },
+  "publishConfig": {
+    "access": "private"
   }
 }

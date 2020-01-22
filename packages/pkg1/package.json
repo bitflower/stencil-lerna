@@ -17,5 +17,8 @@
   "license": "ISC",
   "devDependencies": {
     "typescript": "^3.7.4"
+  },
+  "publishConfig": {
+    "access": "private"
   }
 }
