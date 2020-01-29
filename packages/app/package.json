@@ -14,10 +14,10 @@
     "test.watch": "stencil test --spec --e2e --watchAll"
   },
   "dependencies": {
-    "design-system": "0.0.1",
     "@ryancavanaugh/pkg2": "^3.0.2",
-    "@stencil/core": "^1.9.0-13",
-    "@stencil/router": "^1.0.1"
+    "@stencil/core": "^1.9.0-14",
+    "@stencil/router": "^1.0.1",
+    "design-system": "0.0.1"
   },
   "license": "MIT",
   "devDependencies": {
