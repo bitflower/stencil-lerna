@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "@ryancavanaugh/pkg2": "^3.0.2",
-    "@stencil/core": "^1.9.0-14",
+    "@stencil/core": "^1.9.0-16",
     "@stencil/router": "^1.0.1",
     "design-system": "0.0.1"
   },
