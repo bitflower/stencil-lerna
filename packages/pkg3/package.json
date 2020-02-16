@@ -17,14 +17,15 @@
     "@feathersjs/feathers": "^3.3.1",
     "@ryancavanaugh/pkg1": "^3.0.2",
     "@ryancavanaugh/pkg2": "^3.0.2",
-    "cross-env": "^5.2.0"
+    "cross-env": "^5.2.0",
+    "feathers-localstorage": "^4.0.0"
   },
   "devDependencies": {
     "@types/feathersjs__feathers": "^3.1.5",
     "ts-node": "^7.0.1",
     "tslib": "^1.9.3",
     "tslint": "^5.16.0",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   },
   "publishConfig": {
     "access": "private"

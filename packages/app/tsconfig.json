@@ -27,5 +27,9 @@
     "src/**/*.spec.ts*",
     "src/**/*.e2e.ts*"
   ],
-  "references": [{ "path": "../design-system" }, { "path": "../pkg2" }]
+  "references": [
+    { "path": "../design-system" },
+    { "path": "../pkg2" },
+    { "path": "../pkg3" }
+  ]
 }

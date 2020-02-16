@@ -4,8 +4,6 @@
     "outDir": "lib",
     "rootDir": "src",
     "moduleResolution": "node",
-    "target": "ES2017",
-    "module": "commonjs",
     "typeRoots": [
       /* List of folders to include type definitions from. */
       "node_modules/@types"

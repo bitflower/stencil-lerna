@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "@ryancavanaugh/pkg2": "^3.0.2",
+    "@ryancavanaugh/pkg3": "^3.0.2",
     "@stencil/core": "^1.9.0-16",
     "@stencil/router": "^1.0.1",
     "design-system": "0.0.1"
@@ -22,6 +23,6 @@
   "license": "MIT",
   "devDependencies": {
     "rollup-plugin-node-builtins": "^2.1.2",
-    "typescript": "^3.7.4"
+    "typescript": "^3.7.5"
   }
 }

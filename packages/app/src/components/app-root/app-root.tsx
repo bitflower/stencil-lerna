@@ -1,5 +1,6 @@
 import { Component, Element, h } from '@stencil/core';
 import * as p2 from '@ryancavanaugh/pkg2';
+import { app } from '@ryancavanaugh/pkg3';
 
 const d = p2.getLogger('app-root.tsx');
 
@@ -22,6 +23,13 @@ export class AppRoot {
     if (myComp) {
       await myComp.callMe('Yo');
     }
+
+    // Load data from service
+    const userSettingsService = app.service('user-settings');
+    userSettingsService.create({
+      settingName: 'test',
+      value: 'YO!'
+    });
   }
 
   render() {
