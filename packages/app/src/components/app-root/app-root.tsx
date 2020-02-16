@@ -1,4 +1,4 @@
-import { Component, Element, h } from '@stencil/core';
+import { Component, Element, h, State } from '@stencil/core';
 import * as p2 from '@ryancavanaugh/pkg2';
 import { app } from '@ryancavanaugh/pkg3';
 
@@ -12,6 +12,9 @@ const d = p2.getLogger('app-root.tsx');
 export class AppRoot {
   @Element()
   private $elm: HTMLAppRootElement;
+
+  @State()
+  private numberOfRecords: number;
 
   public async componentDidLoad(): Promise<void> {
     d('componentDidLoad');
@@ -30,6 +33,8 @@ export class AppRoot {
       settingName: 'test',
       value: 'YO!'
     });
+
+    this.numberOfRecords = (await userSettingsService.find({})).length;
   }
 
   render() {
@@ -53,6 +58,8 @@ export class AppRoot {
           <h2>Here's PKG2 consumed directly from "app"</h2>
           <p>{p2.fn()}</p>
           {/* <p>{p2.connectServer()}</p> */}
+
+          <p>Number of records in the service: {this.numberOfRecords}</p>
         </main>
       </div>
     );
