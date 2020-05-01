@@ -16,7 +16,7 @@
   "dependencies": {
     "@bitflower/design-system": "0.0.1",
     "@ryancavanaugh/pkg2": "^3.0.2",
-    "@stencil/core": "^1.12.6",
+    "@stencil/core": "^1.12.7",
     "@stencil/router": "^1.0.1"
   },
   "license": "MIT",
