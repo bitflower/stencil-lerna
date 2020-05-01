@@ -1,26 +1,27 @@
-import { Config } from "@stencil/core";
-import builtins from "rollup-plugin-node-builtins";
+import { Config } from '@stencil/core';
+import builtins from 'rollup-plugin-node-builtins';
 
 // https://stenciljs.com/docs/config
 
 export const config: Config = {
-  namespace: "stencil-lerna",
-  globalStyle: "src/global/app.css",
-  globalScript: "src/global/app.ts",
+  buildDist: true,
+  namespace: 'stencil-lerna',
+  globalStyle: 'src/global/app.css',
+  globalScript: 'src/global/app.ts',
   outputTargets: [
     {
-      type: "dist"
+      type: 'dist',
     },
     {
-      type: "www",
+      type: 'www',
       // comment the following line to disable service workers in production
       serviceWorker: null,
-      baseUrl: "https://myapp.local/"
-    }
+      baseUrl: 'https://myapp.local/',
+    },
   ],
   plugins: [builtins()],
   nodeResolve: {
     browser: true,
-    preferBuiltins: true // Workaround for https://github.com/ionic-team/stencil/issues/1326
-  }
+    preferBuiltins: true, // Workaround for https://github.com/ionic-team/stencil/issues/1326
+  },
 };

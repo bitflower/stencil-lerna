@@ -3,19 +3,19 @@ import { Config } from '@stencil/core';
 import builtins from 'rollup-plugin-node-builtins';
 
 export const config: Config = {
+  buildDist: true,
   namespace: 'design-system',
   outputTargets: [
     {
       type: 'dist',
-      esmLoaderPath: '../loader'
     },
     {
-      type: 'docs-readme'
+      type: 'docs-readme',
     },
     {
       type: 'www',
-      serviceWorker: null // disable service workers
-    }
+      serviceWorker: null, // disable service workers
+    },
   ],
-  plugins: [builtins()]
+  plugins: [builtins()],
 };
