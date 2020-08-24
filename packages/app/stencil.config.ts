@@ -1,4 +1,5 @@
 import { Config } from '@stencil/core';
+import nodePolyfills from 'rollup-plugin-node-polyfills';
 import builtins from 'rollup-plugin-node-builtins';
 
 // https://stenciljs.com/docs/config
@@ -19,7 +20,7 @@ export const config: Config = {
       baseUrl: 'https://myapp.local/',
     },
   ],
-  plugins: [builtins()],
+  plugins: [nodePolyfills()],
   nodeResolve: {
     browser: true,
     preferBuiltins: true, // Workaround for https://github.com/ionic-team/stencil/issues/1326

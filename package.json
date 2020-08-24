@@ -5,7 +5,7 @@
     "server": "lerna run start-ts --stream"
   },
   "devDependencies": {
-    "lerna": "^3.13.4",
-    "typescript": "^3.8.3"
+    "lerna": "^3.22.1",
+    "typescript": "^4.0.2"
   }
 }

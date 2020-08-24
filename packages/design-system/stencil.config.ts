@@ -1,6 +1,6 @@
 import { Config } from '@stencil/core';
-// import nodePolyfills from 'rollup-plugin-node-polyfills';
-import builtins from 'rollup-plugin-node-builtins';
+import nodePolyfills from 'rollup-plugin-node-polyfills';
+// import builtins from 'rollup-plugin-node-builtins'; // TODO: CHECK
 
 export const config: Config = {
   buildDist: true,
@@ -17,5 +17,5 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
   ],
-  plugins: [builtins()],
+  plugins: [nodePolyfills()],
 };

@@ -1,7 +1,6 @@
 {
   "extends": "../tsconfig.settings.json",
   "compilerOptions": {
-    "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "experimentalDecorators": true,
     "lib": ["dom", "es2017"],
