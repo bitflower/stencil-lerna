@@ -16,33 +16,51 @@ This repo started as a clone of https://github.com/RyanCavanaugh/learn-a.
 
 Also note that I haven't updated this `readme.md` in total to represent the Stencil use case.
 
+### Live/Hot Reload
+
+1. Start Production build watch of `design-system`:
+
+```terminal
+cd packages/design-system
+npm run build-watch
+```
+
+2. Start main app which consumes `design-system`:
+
+```terminal
+cd packages/app
+npm start
+```
+
 ### General Structure
 
 As with a normal lerna repo, there's a `packages` folder. Inside we have three creatively named packages `design-system`, `app` as well as `pkg1`, `pkg2` and `pkg3`.
 
 ```
+
 packages/
 | tsconfig.settings.json
 | tsconfig.json
 | app/
-  | tsconfig.json
-  | src/
-  | | (typescript files)
+| tsconfig.json
+| src/
+| | (typescript files)
 | design-system/
-  | tsconfig.json
-  | src/
-  | | (typescript files)
+| tsconfig.json
+| src/
+| | (typescript files)
 | pkg1/
-  | tsconfig.json
-  | src/
-  | | (typescript files)
-  | lib/
-  | | (javascript files)
-  | | (.d.ts files)
+| tsconfig.json
+| src/
+| | (typescript files)
+| lib/
+| | (javascript files)
+| | (.d.ts files)
 | pkg2/
-  | (same as pkg1)
+| (same as pkg1)
 | pkg3/
-  | (same as pkg1)
+| (same as pkg1)
+
 ```
 
 Let's review each file in the repo and explain what's going on
@@ -111,7 +129,7 @@ In the `references` array, we list the paths to the other projects' `tsconfig.js
 #### `packages/pkg2/src/index.ts`
 
 ```ts
-import * as p1 from "@ryancavanaugh/pkg1";
+import * as p1 from '@ryancavanaugh/pkg1';
 
 export function fn4() {
   p1.fn();
