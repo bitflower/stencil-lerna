@@ -11,8 +11,7 @@
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/design-system/design-system.js",
   "files": [
-    "dist/",
-    "loader/"
+    "dist/"
   ],
   "engines": {
     "node": ">=12"

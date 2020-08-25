@@ -4,6 +4,10 @@ This is a "bare minimum" repo that shows one way to configure several Stencil an
 
 This repo started as a clone of https://github.com/RyanCavanaugh/learn-a.
 
+## Prerequisites
+
+`npm i lerna -g`
+
 ## Setting up this repo
 
 ```terminal
