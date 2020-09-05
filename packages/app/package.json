@@ -23,7 +23,7 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@stencil/core": "^2.0.0-7",
+    "@stencil/core": "^2.0.3",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-polyfills": "^0.2.1",
     "typescript": "^4.0.2"
