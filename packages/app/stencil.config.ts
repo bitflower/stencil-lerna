@@ -1,6 +1,5 @@
 import { Config } from '@stencil/core';
 import nodePolyfills from 'rollup-plugin-node-polyfills';
-import builtins from 'rollup-plugin-node-builtins';
 
 // https://stenciljs.com/docs/config
 
